@@ -1,0 +1,22 @@
+{
+  "name": "baby_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fenrisss/baby_playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fenrisss/baby_playwright/issues"
+  },
+  "homepage": "https://github.com/Fenrisss/baby_playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.31.2",
+    "mocha": "^10.2.0"
+  }
+}
