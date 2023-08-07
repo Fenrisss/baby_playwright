@@ -1,5 +1,6 @@
 const { expect } = require('@playwright/test');
 const selectors = require("../selectors/locations_selectors")
+const api_locations = require("../../api/locations_api")
 
 
 exports.LocationPage = class LocationPage {
@@ -29,5 +30,9 @@ exports.LocationPage = class LocationPage {
 
     };
 
+    async deleteLocations(token) {
+        let locationIDs = await api_locations.user_locations_GET(token);
+        console.log(locationIDs)
+    }
 
 };
