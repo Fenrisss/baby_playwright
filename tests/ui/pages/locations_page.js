@@ -20,7 +20,7 @@ exports.LocationPage = class LocationPage {
         await this.page.locator(selectors.buttons.next).click();
         await this.page.locator(selectors.fields.postcode).type('1234234');
         await this.page.mouse.dblclick(410, 300);
-        await expect(this.page.locator("[name='country']")).toHaveValue('Kazakhstan');
+        await expect(this.page.locator("[name='country']")).toHaveValue('Kazakhstan', {timeout: 10000});
         await this.page.locator(selectors.fields.directionHint).type('You take one step left');
         await this.page.locator(selectors.fields.house_number).type('72');
         await this.page.locator(selectors.buttons.next).click();

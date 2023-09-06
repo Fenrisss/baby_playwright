@@ -3,8 +3,8 @@ module.exports = {
         settings: "[href='/settings']",
         locations: "//*[text()='Локации']",
         add: "//*[text()='Добавить']",
-        next: "//*[text()='Next ']",
-        submit: "//*[text()='Submit']",
+        next: "[name='next-button']",
+        submit: "[name='submit-button']",
         location_success: "//*[text()='Локация добавлена']"
 
     },
@@ -14,7 +14,7 @@ module.exports = {
         phone: "[type='tel']",
         postcode: "[name='postcode']",
         directionHint: "[name='directionHint']",
-        house_number: "[name='house-number']"
+        house_number: "[name='houseNumber']"
     },
 
 }
