@@ -32,7 +32,19 @@ exports.LocationPage = class LocationPage {
 
     async deleteLocations(token) {
         let locationIDs = await api_locations.user_locations_GET(token);
-        console.log(locationIDs)
+        console.log(locationIDs);
+        await api_locations.user_address_DELETE(token, locationIDs)
+    };
+
+    async getToken() {
+        const myValue = await this.page.evaluate(() => {
+            return window.localStorage.getItem('user');
+
+        });
+        const obj = JSON.parse(myValue);
+        let token = obj.token;
+        return token;
+        console.log(token);
     }
 
 };
