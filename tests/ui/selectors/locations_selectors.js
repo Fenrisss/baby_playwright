@@ -2,9 +2,9 @@ module.exports = {
     buttons: {
         settings: "[href='/settings']",
         locations: "//*[text()='Локации']",
-        add: "//*[text()='Добавить']",
+        add: "[name='addLocationButton']",
         next: "[name='next-button']",
-        submit: "[name='submit-button']",
+        submit: "[name='saveButton']",
         location_success: "//*[text()='Локация добавлена']"
 
     },

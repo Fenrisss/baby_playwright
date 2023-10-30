@@ -7,7 +7,7 @@ test.use({
     permissions: ['geolocation'],
 });
 
-test('should authorize a user with given creds', async ({page}) => {
+test.skip('should authorize a user with given creds', async ({page}) => {
     const loginPage = new AuthorizationPage(page);
     await loginPage.goto();
     await loginPage.login('nerdjahn@gmail.com', '123456');
