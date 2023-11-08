@@ -23,7 +23,14 @@ exports.LocationPage = class LocationPage {
         await this.page.locator(selectors.fields.directionHint).type('You take one step left');
         await this.page.locator(selectors.fields.house_number).type('72');
         await this.page.locator(selectors.buttons.submit).click();
-        await this.page.screenshot({ path: 'fullpage.png', fullPage: true });
+        // await this.page.screenshot({ path: 'fullpage.png', fullPage: true });
+        const alertElement = await this.page.waitForSelector("[role='alert']", { state: 'visible' });
+        const alertText = await alertElement.innerText();
+        if (alertText === 'Локация добавлена') {
+            console.log('Element contains the expected message: Локация добавлена');
+        } else {
+            console.log('Element does not contain the expected message');
+        }
     };
 
     async deleteLocations(token) {

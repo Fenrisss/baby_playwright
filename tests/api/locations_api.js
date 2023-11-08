@@ -22,7 +22,6 @@ const user_locations_GET = async (token) => base.request
 
 const user_address_DELETE = async (token, locationIDs) => {
     for(let i in locationIDs) {
-        console.log(locationIDs[i]);
         const res = await base.request
             .delete(`/api/v1/location/${locationIDs[i]}`)
             .auth(token, {type: 'bearer'})
